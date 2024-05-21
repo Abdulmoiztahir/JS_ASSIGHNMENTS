@@ -1,0 +1,120 @@
+
+
+@font-face {
+    font-family: "jaro";
+    src: url(./font/Jaro-Regular-VariableFont_opsz.ttf);
+}
+
+@font-face {
+    font-family: "StalinistOne";
+    src: url(./font/StalinistOne-Regular.ttf);
+}
+
+html {
+    --s: 100px; 
+    --c1: #C3CCAF;
+    --c2: #67434F;
+    
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: var(--_s) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
+    --_p: var(--_s) conic-gradient(at 20% 20%,#0000 75%,var(--c2) 0);
+    background:
+      calc( .9*var(--s)) calc( .9*var(--s))/var(--_p),
+      calc(-.1*var(--s)) calc(-.1*var(--s))/var(--_p),
+      calc( .7*var(--s)) calc( .7*var(--s))/var(--_g),
+      calc(-.3*var(--s)) calc(-.3*var(--s))/var(--_g),
+      conic-gradient(from 90deg at 20% 20%,var(--c2) 25%,var(--c1) 0) 
+       0 0/var(--s) var(--s);
+    animation: m 3s infinite;
+  }
+  @keyframes m {
+    0% {
+     background-position: 
+      calc( .9*var(--s)) calc( .9*var(--s)),
+      calc(-.1*var(--s)) calc(-.1*var(--s)),
+      calc( .7*var(--s)) calc( .7*var(--s)),
+      calc(-.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    25% {
+     background-position: 
+      calc(1.9*var(--s)) calc( .9*var(--s)),
+      calc(-1.1*var(--s)) calc(-.1*var(--s)),
+      calc(1.7*var(--s)) calc( .7*var(--s)),
+      calc(-1.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    50% {
+     background-position: 
+      calc(1.9*var(--s)) calc(-.1*var(--s)),
+      calc(-1.1*var(--s)) calc( .9*var(--s)),
+      calc(1.7*var(--s)) calc(-.3*var(--s)),
+      calc(-1.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    75% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-.1*var(--s)),
+      calc(-2.1*var(--s)) calc( .9*var(--s)),
+      calc(2.7*var(--s)) calc(-.3*var(--s)),
+      calc(-2.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    100% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-1.1*var(--s)),
+      calc(-2.1*var(--s)) calc(1.9*var(--s)),
+      calc(2.7*var(--s)) calc(-1.3*var(--s)),
+      calc(-2.3*var(--s)) calc(1.7*var(--s)),0 0
+    }
+  }
+  
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    background-image: url(./img/pexels-douglas-lai-175506-4121399.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: 80vw;
+    border: 1px solid black;
+    border-radius: 150px;
+    box-shadow: 0px 3px 20px whitesmoke;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0px 0px 20px black;
+}
+
+h1{
+    text-align: center;
+    font-family: "StalinistOne", 'Arial Narrow', Arial, sans-serif;
+    margin-top: 100px;
+    font-size: 35px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.box{
+    border: 1px solid black;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'jaro', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 5px p5x black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 10px;
+}

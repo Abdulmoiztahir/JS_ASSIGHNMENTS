@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>THE CALCULATOR</h2>
+    <h1 class="thug">Thug</h1>
+    <h1 class="life">Life</h1>
+    <div id="cal-body">
+        <div id="screen"></div>
+        <div id="all-buttons">
+            <button class="i" onClick="getValue('7')">7</button>
+            <button class="h" onClick="getValue('8')">8</button>
+            <button class="g" onClick="getValue('9')">9</button>
+            <button class="del" onClick="getValue('delete')">Del</button>
+            <button class="f" onClick="getValue('4')">4</button>
+            <button class="e" onClick="getValue('5')">5</button>
+            <button class="d" onClick="getValue('6')">6</button>
+            <button class="operator" onClick="getValue('/')">/</button>
+            <button class="a" onClick="getValue('1')">1</button>
+            <button class="b" onClick="getValue('2')">2</button>
+            <button class="c" onClick="getValue('3')">3</button>
+            <button class="operator" onClick="getValue('*')">*</button>
+            <button class="zero" onClick="getValue('0')">0</button>
+            <button onClick="getValue('.')">.</button>
+            <button class="operator" onClick="getValue('-')">-</button>
+            <button class="equal-sign" onClick="getValue('=')">=</button>
+            <button class="operator" onClick="getValue('+')">+</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

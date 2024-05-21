@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class="titlepng" rel="icon" href="./img/pngimg.com - dice_PNG117.png"  >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>DICE GAME</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <center>
+    <div data-aos="zoom-in" data-aos-duration="900" class="main_container">
+        <h1 data-aos="fade-up" data-aos-duration="1500">DICE GAME</h1>
+        <h2 id="final_result"></h2>
+            <div data-aos="flip-up" data-aos-duration="1000"class="container">
+            <div onclick="try_your_luck(1)" class="box">1</div>
+            <div onclick="try_your_luck(2)" class="box">2</div>
+            <div onclick="try_your_luck(3)" class="box">3</div>
+            <div onclick="try_your_luck(4)" class="box">4</div>
+            <div onclick="try_your_luck(5)" class="box">5</div>
+            <div onclick="try_your_luck(6)" class="box">6</div>
+        </div>
+
+        <div data-aos="flip-down" data-aos-duration="1000" class="container">
+            <div class="info_box">user number : <span id="user_number">- -</span></div>
+            <div class="info_box">random number : <span id="random_number">- -</span></div>
+            <div id="win_loss_color" class="info_box"><span id="result">you win / loss</span></div>
+        </div>
+
+        <div data-aos="flip-down" data-aos-duration="1000" class="container">
+            <div class="info_box">Turns :<span id="round_counts">10</span></div>
+            <div class="info_box">Win : <span id="win_counts">0</span></div>
+            <div class="info_box">Loss : <span id="loss_counts">0</span></div>
+        </div>
+    </div>
+</center> 
+    <script src="./app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+
+</html>

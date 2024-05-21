@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>QUICK STOP GAME</title>
+</head>
+<body>
+    
+    
+    <div class="video">
+        <video autoplay muted loop id="bg-video">
+            <source src="./video/SnapSave.io-Dollar Symbols Falling Down Free video Background Loop - VJ Loops for Background-(1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <center>
+        <ul class="rules">
+            <li>1.You have to click  before 1000</li>
+            <li>2.If number matches your number then you will win.</li>
+            <li>3.If it doesnt match then you are loss.</li>
+        </ul>
+        <div class="main_container">
+    <div class="container">
+   <h1 >QUICK STOP GAME</h1>
+   <h2 id="number">00</h2>
+   <input id="uservalue" type="text" placeholder="input number" maxlength="3"><br/><br/>
+   <button id="start" onclick="start()">start</button>
+   <button id="stop" onclick="stop()">stop</button>
+   <p id="msg"></p>
+</div>
+</div>
+</center>
+    <script src="app.js"></script>
+</body>
+</html>

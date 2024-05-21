@@ -1,0 +1,70 @@
+
+input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px; 
+    font-size: 16px; 
+    transition: border-color 0.3s ease;
+}    
+
+/* Input hover state */
+input:hover {
+    border-color: #999; /* Darker border color on hover */
+}
+
+/* Input focus state */
+input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #4CAF50; /* Green border color when focused */
+}
+
+
+button:hover,
+select:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+button,
+select {
+    margin: 5px;
+    padding: 10px 15px; /* Increased padding for better clickability */
+    border: none;
+    border-radius: 6px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Adjusted font size for better readability */
+    font-weight: bold; /* Added font weight for emphasis */
+    color: #ffffff; /* Text color */
+    background-color: #4CAF50; /* Green background color */
+}
+
+/* Text Color Input Styles */
+#textcolor input[type=color] {
+    border: none;
+    width: 40px; /* Increased width for better visibility */
+    height: 40px; /* Increased height for better clickability */
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Heading Styles */
+h1 {
+    margin-bottom: 30px; /* Increased margin for better separation */
+    font-size: 24px; /* Larger font size for headings */
+    color: #333333; /* Darker text color for headings */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px; /* Increased max-width for larger screens */
+    margin: 20px auto; /* Added margin for better centering */
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing */
+    background-color: #f9f9f9; /* Light background color for better contrast */
+    border-radius: 8px; /* Rounded corners for container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

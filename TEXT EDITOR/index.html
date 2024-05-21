@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>TEXT EDITOR</title>
+</head>
+
+<body>
+
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+
+        <h1>TEXT EDITOR</h1>
+        <input id="input" type="text" placeholder="Enter text">
+
+        <button id="bold">Bold</button>
+        <button id="italic">Italic</button>
+        <button id="underline">Underline</button>
+        <button id="fontsize">Fontsize</button>
+        <select name="fontsizees" id="sizes">
+            <option value="40px">40px</option>
+            <option value="60px">60px</option>
+            <option value="100px">100px</option>
+        </select>
+        <button id="fontfamily">Fontfamily</button>
+        <select name="fontfamilies" id="fontfamilies">
+            <option value="Impact">Impact</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Arial">Arial</option>
+        </select>
+        <button id="textcolor"><input type="color"></button>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./app.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
+</body>
+
+</html>

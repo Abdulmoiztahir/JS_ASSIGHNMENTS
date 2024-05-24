@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>   
+<div class="main">
+   <div data-aos="fade-up">
+    <h1>Present</h1><h2 id="present" style="border: 2px solid #4CAF50; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">00</h2>
+   </div>
+   <div data-aos="fade-up" data-aos-delay="100">
+    <h1>Absent</h1><h2 id="absent" style="border: 2px solid #f44336; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">00</h2>
+   </div>
+   <div data-aos="fade-up" data-aos-delay="200">
+    <h1>Leave</h1><h2 id="leave" style="border: 2px solid #FFA500; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">00</h2>
+   </div>
+</div>
+<center>
+    <table data-aos="fade-up" data-aos-delay="300">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>FatherName</th>
+                <th>Roll No</th>
+                <th>Age</th>
+                <th>Present</th>
+                <th>Absent</th>
+                <th>Leave</th>
+            </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+    </table>
+</center>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

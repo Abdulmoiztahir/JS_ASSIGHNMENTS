@@ -1,5 +1,7 @@
 body {
     background-color: #080710;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
   .background {

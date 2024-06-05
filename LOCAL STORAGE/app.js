@@ -60,21 +60,25 @@ function saveValueToLocalStorage(obj) {
 }
 
 function displayUserNotes() {
-  var notes = localStorage.getItem('notes')
-  var list = document.getElementById('list')
-  var email = localStorage.getItem("email") 
+  var notes = localStorage.getItem("notes");
+  var list = document.getElementById("list");
+  var currentUserEmail = localStorage.getItem("email");
+
   if (notes) {
-    notes = JSON.parse(notes)
-    notes.forEach(function(data,ind){
-      console.log(data);
-      if (data.email === email) {
+    list.innerHTML = "";
+    notes = JSON.parse(notes);
+    console.log(notes);
+    notes.forEach(function (data, ind) {
+      console.log("data=>", data);
+      if (data.email === currentUserEmail) {
         var liElement = ` <li class="border rounded p-2 my-2">
         <p class = "font-medium">${data.note}</p> 
             <p>${data.email}</p>
           </li>`;
-        list.innerHTML += liElement; 
+        list.innerHTML += liElement;
       }
-    })
+    });
   }
 }
-displayUserNotes()
+
+displayUserNotes();

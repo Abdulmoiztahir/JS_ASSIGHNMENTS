@@ -18,7 +18,7 @@ function checkUserLogin() {
     login_container.style.display = "none"
     home_container.style.display = "block"
     user_email.innerText = email
-displayUserNotes()
+    displayUserNotes()
   } else {
     login_container.style.display = "block"
     home_container.style.display = "none"
@@ -55,7 +55,7 @@ function saveValueToLocalStorage(obj) {
     notes = [obj];
     // console.log(notes);
     localStorage.setItem("notes", JSON.stringify(notes));
-  } 
+  }
   displayUserNotes()
 }
 

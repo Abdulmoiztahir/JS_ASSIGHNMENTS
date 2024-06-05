@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
-  <title>Glassmorphism login Form Tutorial in html css</title>
+<head>
+  <title>Login Here</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -19,8 +19,14 @@
     }
   </style>
 </head>
-
 <body>
+  <div class="d-flex flex-column justify-content-center w-100 h-100">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="btn-group my-5">
+      </div>
+    </div>
+  </div>
+  </div>
   <div id="login_container">
     <div class="background">
       <div class="shape"></div>
@@ -40,29 +46,29 @@
     </div>
   </div>
 
-  <div  id="home_container">
-    <div  class="bg-white ">
-    <div class="flex justify-between align-center p-10">
-      <h1>Welcome!<br/>Add your notes to keep in mind</h1>
-      <span class="flex">
-        <p style="font-style: italic;" class="px-3" id="user_email"></p>
-        <button class="logout" onclick="logout()">Logout</button>
-      </span>
-    </div>
-  </div>
-
-  <div class="p-10">
-    <div>
-      <textarea class="bg-white" id="note" placeholder="Add your notes" class="border p-4 w-full"  rows="5"></textarea>
-      <div>
-        <button onclick="submitNote()" class="btn bg-blue-600 py-2 px-3 rounded text-white">Submit</button>
+  <div style="font-size: 20px;" id="home_container">
+    <div class="bg-white ">
+      <div class="flex justify-between align-center p-10">
+        <h1>Welcome!<br />Add your notes to keep in mind</h1>
+        <span class="flex">
+          <p style="font-style: italic;" class="px-3" id="user_email"></p>
+          <button class="logout" onclick="logout()">Logout</button>
+        </span>
       </div>
     </div>
 
-    <ul style="font-style: italic;"  class="text-white" id="list"></ul>
+    <div class="p-10">
+      <div>
+        <textarea style="width: 900px;" class="bg-white" id="note" placeholder="Add your notes" class="border p-4 w-full" rows="5" ></textarea>
+        <div>
+          <button onclick="submitNote()" class="btn bg-blue-600 py-2 px-3 rounded text-white">Submit</button>
+        </div>
+      </div>
+
+      <ul style="font-style: italic;" class="text-white" id="list"></ul>
+    </div>
   </div>
   </div>
-</div>
 
   <script src="./app.js"></script>
 </body>

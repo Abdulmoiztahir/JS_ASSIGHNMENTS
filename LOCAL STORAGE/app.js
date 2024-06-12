@@ -17,10 +17,12 @@ function checkUserLogin() {
   if (email) {
     login_container.style.display = "none"
     home_container.style.display = "block"
+    home_container.style.fontFamily ="san-sarif"
     user_email.innerText = email
     displayUserNotes()
   } else {
     login_container.style.display = "block"
+    home_container.style.display = "none"
     home_container.style.display = "none"
   }
 }
@@ -70,15 +72,50 @@ function displayUserNotes() {
     console.log(notes);
     notes.forEach(function (data, ind) {
       console.log("data=>", data);
-      if (data.email === currentUserEmail) {
+      var date = new Date(); 
+
+      if (currentUserEmail === "admin@gmail.com" || data.email === currentUserEmail) {
         var liElement = ` <li class="border rounded p-2 my-2">
-        <p class = "font-medium">${data.note}</p> 
-            <p>${data.email}</p>
-          </li>`;
+        <p class="font-medium">${data.note}</p> 
+        <p>${data.email}</p>
+        <p>Subject: ${data.subject}</p>
+        <p>Submitted on: ${date.toLocaleString()}</p>
+        </li>`;
         list.innerHTML += liElement;
       }
     });
   }
 }
+
+function submitNote() {
+  var note = document.getElementById("note").value;
+  var currentUserEmail = localStorage.getItem("email");
+  var subject = document.getElementById("subjectDropdown").value; // Capture selected subject from dropdown
+
+  if (note.trim() !== "") {
+    var timestamp = new Date().getTime();
+    var newNote = {
+      note: note,
+      email: currentUserEmail,
+      timestamp: timestamp,
+      subject: subject // Include subject in the note object
+    };
+
+    var notes = localStorage.getItem("notes");
+    if (notes) {
+      notes = JSON.parse(notes);
+    } else {
+      notes = [];
+    }
+
+    notes.push(newNote);
+    localStorage.setItem("notes", JSON.stringify(notes));
+    displayUserNotes();
+  } else {
+    alert("Please enter a note.");
+  }
+}
+
+
 
 displayUserNotes();

@@ -1,0 +1,97 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 30px;
+}
+
+.weather-container {
+    background-image: url(https://as1.ftcdn.net/v2/jpg/07/69/56/70/1000_F_769567079_BGS1sv4iD80sN1cjR6ZnvS17cFS2qI7M.jpg);
+    background-size: cover;
+    background-position-x: center;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    color: white;
+    width: 100;
+    height: 500px;
+}
+
+.weather-info {
+    margin-top: 5px;
+}
+
+.weather-info p {
+    margin: 5px 0;
+
+}
+
+/* Dropdown and button styling */
+#city-select {
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#get-weather-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#get-weather-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Animation-specific styling */
+[data-aos="fade-up"],
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+[data-aos="fade-up"].aos-animate,
+[data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+}
+
+/* Weather information styling */
+.weather-info h2 {
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 24px;
+}
+
+/* Icons (assuming you want to use Font Awesome icons) */
+.weather-info strong::after {
+    content: ":";
+    margin-right: 5px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .weather-container {
+        max-width: 300px;
+    }
+    #get-weather-btn {
+        font-size: 14px;
+    }
+}

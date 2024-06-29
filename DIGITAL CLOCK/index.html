@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="titlepng" rel="icon" href="./img/—Pngtree—a transparent wall clock_12249555.png">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <title>DIGITAL CLOCK</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link class="titlepng" rel="icon" href="./img/—Pngtree—a transparent wall clock_12249555.png">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <title>DIGITAL CLOCK</title>
+    </head>
 
-<body>
-    <a style="color: white;" href="../index.html"><h2>back</h2></a>
-    <center>
+    <body>
+        <a style="color: white;" href="../index.html"><h2>back</h2></a>
+        <center>
 
-        <div data-aos="zoom-in" data-aos-duration="900" class="main_container">
-            <h1 data-aos="zoom-in" data-aos-duration="900">DIGITAL CLOCK</h1>
-            <div class="container">
-                <div data-aos="flip-up" data-aos-duration="1000" id="hours" class="digits">00</div>
-                <div data-aos="flip-up" data-aos-duration="1000" id="minutes" class="digits">00</div>
-                <div data-aos="flip-up" data-aos-duration="1000" id="seconds" class="digits">00</div>
-                <div data-aos="flip-up" data-aos-duration="1000" id="am_pm" class="digits">am/pm</div>
+            <div data-aos="zoom-in" data-aos-duration="900" class="main_container">
+                <h1 data-aos="zoom-in" data-aos-duration="900">DIGITAL CLOCK</h1>
+                <div class="container">
+                    <div data-aos="flip-up" data-aos-duration="1000" id="hours" class="digits">00</div>
+                    <div data-aos="flip-up" data-aos-duration="1000" id="minutes" class="digits">00</div>
+                    <div data-aos="flip-up" data-aos-duration="1000" id="seconds" class="digits">00</div>
+                    <div data-aos="flip-up" data-aos-duration="1000" id="am_pm" class="digits">am/pm</div>
+                </div>
+                <div class="container2">
+                    <div data-aos="flip-up" data-aos-duration="1000" class="date" id="date">DD/</div>
+                    <div data-aos="flip-up" data-aos-duration="1000" class="date" id="month">MM/</div>
+                    <div data-aos="flip-up" data-aos-duration="1000" class="date" id="year">YY</div>
+                </div>
+
             </div>
-            <div class="container2">
-                <div data-aos="flip-up" data-aos-duration="1000" class="date" id="date">DD/</div>
-                <div data-aos="flip-up" data-aos-duration="1000" class="date" id="month">MM/</div>
-                <div data-aos="flip-up" data-aos-duration="1000" class="date" id="year">YY</div>
-            </div>
+        </center>
 
-        </div>
-    </center>
+        <script src="./app.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
 
-    <script src="./app.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
-
-</html>
+    </html>

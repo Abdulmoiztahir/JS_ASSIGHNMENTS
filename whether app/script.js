@@ -1,3 +1,18 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+const firebaseConfig = {
+    apiKey: "AIzaSyBfFjmukRJPsNebj5r2zCPl4WLY0EPyviM",
+    authDomain: "project1-627f4.firebaseapp.com",
+    projectId: "project1-627f4",
+    storageBucket: "project1-627f4.appspot.com",
+    messagingSenderId: "132350550264",
+    appId: "1:132350550264:web:b852cf21fe46015edf9b0d",
+    measurementId: "G-VETVX827NS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 document.addEventListener('DOMContentLoaded', function() {
     const apiKey = 'c153479685c47f1b34a83591f3b1acbe';
     const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';

@@ -45,3 +45,6 @@
         year.innerText = currentYear;
     }, 1000)
 
+    function greet(name) {
+        return "Hello, " + name;
+      }

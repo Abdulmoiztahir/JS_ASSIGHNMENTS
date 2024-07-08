@@ -30,3 +30,8 @@ setInterval(function(){
 }, 1000)
 
 
+var arr = [1, 2, 3, 4]
+
+arr.length =  10 
+
+console.log(arr);

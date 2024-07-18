@@ -14,7 +14,7 @@ login_form.addEventListener("submit", function (e) {
 signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
-    window.location.href = "/"
+    location.href = "../../index.html"
   })
   .catch((error) => {
     const errorCode = error.code;

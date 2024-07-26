@@ -10,7 +10,7 @@ import {
   collection,
   updateDoc,
   arrayUnion,
-  arrayRemove
+  arrayRemove,
 } from "./utils/utils.js";
 
 const logout_btn = document.getElementById("logout_btn");
@@ -19,7 +19,7 @@ const avatar = document.getElementById("avatar");
 const products_card_container = document.getElementById(
   "products_card_container"
 );
-const userEmail = document.getElementById("userEmail")
+const userEmail = document.getElementById("userEmail");
 getAllProducts();
 console.log(auth);
 
@@ -43,7 +43,7 @@ logout_btn.addEventListener("click", function () {
   signOut(auth)
     .then(() => {
       // Sign-out successful.
-      window.location.href = "/";
+      location.href = "./index.html";
       console.log("logout ho gya");
     })
     .catch((error) => {
@@ -68,6 +68,7 @@ async function getAllProducts() {
     querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       const products = doc.data();
+      console.log("products ==>", products);
 
       const {
         productImg,
@@ -89,17 +90,22 @@ async function getAllProducts() {
         <p class="text-gray-600 mb-2">Price: ${productPrice}</p>
         <div class="flex justify-between items-center">
           <button
-            id = ${doc.id}
-            onclick ="Addtocart(this)"
+          id="${doc.id}"
+            onclick = "addToCart(this)"
             class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600"
-
           >
-            Add Cart
+            ${
+              auth?.currentUser &&
+              products?.addToCart?.includes(auth?.currentUser.uid)
+                ? "Carted"
+                : "AddToCart"
+            } 
           </button>
         </div>
       </div>
     </div>`;
-      window.Addtocart = Addtocart;
+
+      window.addToCart = addToCart;
       products_card_container.innerHTML += cards;
       console.log(products);
     });
@@ -108,10 +114,32 @@ async function getAllProducts() {
   }
 }
 
-async function Addtocart(e) {
-  console.log(e);
+async function addToCart(e) {
+  // console.log("addToCart", e);
   if (auth.currentUser) {
+    e.disabled = true;
+    const docRef = doc(db, "products", e.id);
+    console.log("e.id==>",e.id);
+    if (e.innerText == "Carted") {
+      updateDoc(docRef, {
+        addTocart: arrayRemove(auth.currentUser.uid),
+      })
+        .then(() => {
+          e.innerText = "addToCart";
+          e.disabled = false; 
+        })
+        .catch((err) => console.log(err));
+    } else {
+      updateDoc(docRef, {
+        addTocart: arrayUnion(auth.currentUser.uid),
+      })
+        .then(() => {
+          e.innerText = "Carted";
+          e.disabled = false;
+        })
+        .catch((err) => console.log(err));
+    }
   } else {
-    window.location.href = "./auth/login/index.html";
+    location.href = "./auth/login/index.html";
   }
 }

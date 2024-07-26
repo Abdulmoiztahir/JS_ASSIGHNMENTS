@@ -58,7 +58,7 @@ signup_btn.addEventListener("submit", function (e) {
           setDoc(userDocRef, userInfo)
            .then(() => {
               console.log("User information saved to Firestore");
-              window.location.href = "/";
+              location.href = "../../index.html";
             })
            .catch((error) => {
               console.error("Error saving user information to Firestore:", error);

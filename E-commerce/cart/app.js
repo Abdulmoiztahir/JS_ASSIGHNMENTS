@@ -88,7 +88,7 @@ async function getCartProducts(uid) {
         createdByEmail,
       } = products;
 
-      const cards = `<div class="bg-white shadow-md rounded-lg overflow-hidden">
+      const cards = `<div class="bg-white shadow-md rounded-lg overflow-hidden aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
         <img
           src="${productImg}"
           alt="Event Image"
@@ -132,3 +132,7 @@ function remove(productId, uid) {
     console.error("Error removing product from cart", error);
   });
 }
+
+AOS.init({
+  duration: 1200,
+});

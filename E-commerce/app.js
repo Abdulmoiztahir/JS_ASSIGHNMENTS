@@ -78,7 +78,7 @@ async function getAllProducts() {
         createdByEmail,
       } = products;
 
-      const cards = `<div class="bg-white shadow-md rounded-lg overflow-hidden">
+      const cards = `<div class="bg-white shadow-md rounded-lg overflow-hidden aos-init" data-aos="fade-up">
       <img
         src="${productImg}"
         alt="Event Image"
@@ -143,3 +143,8 @@ async function addToCart(e) {
     location.href = "./auth/login/index.html";
   }
 }
+
+// Add AOS animation
+AOS.init({
+  duration: 1200,
+});

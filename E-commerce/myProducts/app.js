@@ -62,7 +62,7 @@ function getUserInfo(uid) {
 
 async function getMyProducts(uid) {
   try {
-    const q = query(collection(db , "products"), where("createdBy", "==", uid));
+    const q = query(collection(db, "products"), where("createdBy", "==", uid));
     const querySnapshot = await getDocs(q);
     products_card_container.innerHTML = "";
     querySnapshot.forEach((doc) => {
@@ -77,26 +77,28 @@ async function getMyProducts(uid) {
         createdByEmail,
       } = products;
 
-      const cards = `<div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <img
-          src="${productImg}"
-          alt="Event Image"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h2 class="text-xl font-bold mb-2">${productTitle}</h2>
-          <p class="text-gray-600 mb-2">Creator: ${createdByEmail}</p>
-          <p class="text-gray-600 mb-2">Price: ${productPrice}</p>
-          <div class="flex justify-between items-center">
-            <button
-              class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600"
+      const cards = `
+        <div class="bg-white shadow-md rounded-lg overflow-hidden aos-init" data-aos="fade-up">
+          <img
+            src="${productImg}"
+            alt="Event Image"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-xl font-bold mb-2">${productTitle}</h2>
+            <p class="text-gray-600 mb-2">Creator: ${createdByEmail}</p>
+            <p class="text-gray-600 mb-2">Price: ${productPrice}</p>
+            <div class="flex justify-between items-center">
+              <button
+                class="bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600"
   
-            >
-              Add Cart
-            </button>
+              >
+                Add Cart
+              </button>
+            </div>
           </div>
         </div>
-      </div>`;
+      `;
 
       products_card_container.innerHTML += cards;
       console.log(products);
@@ -105,3 +107,8 @@ async function getMyProducts(uid) {
     alert(err);
   }
 }
+
+// Initialize AOS
+AOS.init({
+  duration: 1200,
+});
